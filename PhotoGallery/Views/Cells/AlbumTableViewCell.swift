@@ -23,6 +23,7 @@ class AlbumTableViewCell: UITableViewCell {
     func configureWith(_ album: Album) {
         albumNumLabel.text = "Album \(album.id)"
         titleLabel.text = album.title.capitalizingFirstLetter()
+        accessoryType = .disclosureIndicator
     }
     
 }

@@ -21,6 +21,7 @@
 		B09221152556FD5F00A21645 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09221132556FD5F00A21645 /* AlbumTableViewCell.swift */; };
 		B09221162556FD5F00A21645 /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09221142556FD5F00A21645 /* AlbumTableViewCell.xib */; };
 		B09221192557029700A21645 /* String+CapitalizingFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09221182557029700A21645 /* String+CapitalizingFirstLetter.swift */; };
+		B092211C25570BAB00A21645 /* UIImageView+LoadImageInCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092211B25570BAA00A21645 /* UIImageView+LoadImageInCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		B09221132556FD5F00A21645 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		B09221142556FD5F00A21645 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
 		B09221182557029700A21645 /* String+CapitalizingFirstLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+CapitalizingFirstLetter.swift"; sourceTree = "<group>"; };
+		B092211B25570BAA00A21645 /* UIImageView+LoadImageInCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImageInCache.swift"; sourceTree = "<group>"; };
 		C08E52E9551C57283977241F /* Pods-PhotoGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.release.xcconfig"; path = "Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +156,7 @@
 		B09220FF2556F9A400A21645 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B092211B25570BAA00A21645 /* UIImageView+LoadImageInCache.swift */,
 				B09221182557029700A21645 /* String+CapitalizingFirstLetter.swift */,
 			);
 			path = Extensions;
@@ -301,6 +304,7 @@
 			files = (
 				B09220BC2556E64A00A21645 /* AppDelegate.swift in Sources */,
 				B09221192557029700A21645 /* String+CapitalizingFirstLetter.swift in Sources */,
+				B092211C25570BAB00A21645 /* UIImageView+LoadImageInCache.swift in Sources */,
 				B09221042556FAE800A21645 /* AlbumsTableViewController.swift in Sources */,
 				B09220BE2556E64A00A21645 /* SceneDelegate.swift in Sources */,
 				B09221082556FB5300A21645 /* Album.swift in Sources */,

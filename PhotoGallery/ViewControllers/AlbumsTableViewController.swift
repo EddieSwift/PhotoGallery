@@ -77,6 +77,7 @@ extension AlbumsTableViewController {
         
         let album = albums[indexPath.row]
         cell.configureWith(album)
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .white : .systemGray5
         
         return cell
     }
@@ -86,4 +87,5 @@ extension AlbumsTableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.rowHeight
     }
+    
 }
