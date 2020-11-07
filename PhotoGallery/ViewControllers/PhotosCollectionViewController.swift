@@ -9,6 +9,8 @@ import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController {
     
+    // MARK: - Properties
+    
     private let reuseIdentifier = "photoCell"
     private var photos = [Photo]()
     private let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -92,6 +94,14 @@ extension PhotosCollectionViewController {
         cell.configureWith(photo)
         
         return cell
+    }
+    
+    // MARK: - Navigation
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = PhotoViewController(nibName: "PhotoViewController", bundle: nil)
+        vc.photo = photos[indexPath.row]
+        present(vc, animated: true, completion: nil)
     }
     
 }

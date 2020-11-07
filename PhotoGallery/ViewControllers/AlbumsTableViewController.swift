@@ -9,6 +9,8 @@ import UIKit
 
 class AlbumsTableViewController: UITableViewController {
     
+    // MARK: - Properties
+    
     private var albums = [Album]()
     private let albumsURL = "/albums"
     private let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -18,7 +20,7 @@ class AlbumsTableViewController: UITableViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        AlbumTableViewCell.register(in: tableView)
+        
         title = "Albums"
         setupActivityIndicator()
         
