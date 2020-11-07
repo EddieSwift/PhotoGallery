@@ -18,11 +18,11 @@ class AlbumsTableViewController: UITableViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        title = "Albums"
         AlbumTableViewCell.register(in: tableView)
+        title = "Albums"
+        setupActivityIndicator()
         
         getAlbums()
-        setupActivityIndicator()
     }
     
     // MARK: - Network Method
@@ -86,6 +86,15 @@ extension AlbumsTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.rowHeight
+    }
+    
+    // MARK: - Navigation
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let layout = UICollectionViewFlowLayout()
+        let photosCollectionViewController = PhotosCollectionViewController(collectionViewLayout: layout)
+        photosCollectionViewController.page = albums[indexPath.row].id
+        navigationController?.pushViewController(photosCollectionViewController, animated: true)
     }
     
 }
