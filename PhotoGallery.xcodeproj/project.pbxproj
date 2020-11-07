@@ -72,15 +72,79 @@
 		B09220BA2556E64A00A21645 /* PhotoGallery */ = {
 			isa = PBXGroup;
 			children = (
-				B09220BB2556E64A00A21645 /* AppDelegate.swift */,
-				B09220BD2556E64A00A21645 /* SceneDelegate.swift */,
-				B09220BF2556E64A00A21645 /* ViewController.swift */,
-				B09220C12556E64A00A21645 /* Main.storyboard */,
-				B09220C42556E64C00A21645 /* Assets.xcassets */,
-				B09220C92556E64C00A21645 /* Info.plist */,
-				B09220F42556F74200A21645 /* LaunchScreen.storyboard */,
+				B09220F72556F78E00A21645 /* ViewControllers */,
+				B09220F82556F79900A21645 /* Views */,
+				B09220FD2556F97D00A21645 /* Services */,
+				B09220FF2556F9A400A21645 /* Extensions */,
+				B09221002556F9B500A21645 /* Helpers */,
+				B09220FA2556F7D500A21645 /* Environment */,
 			);
 			path = PhotoGallery;
+			sourceTree = "<group>";
+		};
+		B09220F72556F78E00A21645 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B09220BF2556E64A00A21645 /* ViewController.swift */,
+				B09220C12556E64A00A21645 /* Main.storyboard */,
+				B09220F42556F74200A21645 /* LaunchScreen.storyboard */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B09220F82556F79900A21645 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B09220F92556F7A000A21645 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B09220F92556F7A000A21645 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B09220FA2556F7D500A21645 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				B09220BB2556E64A00A21645 /* AppDelegate.swift */,
+				B09220BD2556E64A00A21645 /* SceneDelegate.swift */,
+				B09220C42556E64C00A21645 /* Assets.xcassets */,
+				B09220C92556E64C00A21645 /* Info.plist */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		B09220FD2556F97D00A21645 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B09220FE2556F98500A21645 /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B09220FE2556F98500A21645 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B09220FF2556F9A400A21645 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B09221002556F9B500A21645 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D89D1B28952B34A5EC95A611 /* Frameworks */ = {
@@ -349,7 +413,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8345E68DL;
-				INFOPLIST_FILE = PhotoGallery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoGallery/Environment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -369,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z8345E68DL;
-				INFOPLIST_FILE = PhotoGallery/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PhotoGallery/Environment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
