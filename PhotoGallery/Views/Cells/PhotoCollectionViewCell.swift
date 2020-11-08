@@ -9,10 +9,10 @@ import UIKit
 
 class PhotoCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageView: UIImageView!
+    
     public static let identifier = "photoCell"
     private static let nibName   = "PhotoCollectionViewCell"
-    
-    @IBOutlet weak var imageView: UIImageView!
     
     public static func register(in collectionView: UICollectionView) {
         let nib = UINib.init(nibName: nibName, bundle: nil)

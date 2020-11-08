@@ -20,14 +20,13 @@ class PhotosCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
-        setupActivityIndicator()
-        
-        PhotoCollectionViewCell.register(in: collectionView)
-        
         photoUrl = "/albums/\(page)/photos"
         collectionView.dataSource = self
         collectionView.delegate = self
+        PhotoCollectionViewCell.register(in: collectionView)
+        
+        setupUI()
+        setupActivityIndicator()
         
         getPhotos()
     }

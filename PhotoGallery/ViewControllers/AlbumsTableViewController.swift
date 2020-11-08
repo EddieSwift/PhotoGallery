@@ -20,10 +20,9 @@ class AlbumsTableViewController: UITableViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
         title = "Albums"
-        setupActivityIndicator()
         
+        setupActivityIndicator()
         getAlbums()
     }
     

@@ -114,9 +114,9 @@
 			children = (
 				B09221032556FAE800A21645 /* AlbumsTableViewController.swift */,
 				B092211F25570CDD00A21645 /* PhotosCollectionViewController.swift */,
-				B09220C12556E64A00A21645 /* Main.storyboard */,
 				B092212F2557259F00A21645 /* PhotoViewController.swift */,
 				B09221302557259F00A21645 /* PhotoViewController.xib */,
+				B09220C12556E64A00A21645 /* Main.storyboard */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
