@@ -13,6 +13,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     private let reuseIdentifier = "photoCell"
     private var photos = [Photo]()
+    private let networkService = NetworkService()
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     private var photoUrl = ""
     var page = 0
@@ -37,7 +38,7 @@ class PhotosCollectionViewController: UICollectionViewController {
     
     private func getPhotos() {
         startAnimation()
-        NetworkService.shared.getItems(photoUrl) { [weak self] (state: NetworkResponse<Photo>) in
+        networkService.getItems(photoUrl) { [weak self] (state: NetworkResponse<Photo>) in
             guard let `self` = self else { return }
             switch state {
             case .success(let photos):

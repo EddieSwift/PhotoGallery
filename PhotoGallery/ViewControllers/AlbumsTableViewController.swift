@@ -14,8 +14,18 @@ class AlbumsTableViewController: UITableViewController {
     private var albums = [Album]()
     private let albumsURL = "/albums"
     private let activityIndicator = UIActivityIndicatorView(style: .large)
+    private let networkService: NetworkService!
     
-    // MARK: - Lifecycle
+    // MARK: - Lifecycle Methods
+    
+    init(networkService: NetworkService) {
+        self.networkService = networkService
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +42,7 @@ class AlbumsTableViewController: UITableViewController {
     
     private func getAlbums() {
         startAnimation()
-        NetworkService.shared.getItems(albumsURL) { [weak self] (state: NetworkResponse<Album>) in
+        networkService.getItems(albumsURL) { [weak self] (state: NetworkResponse<Album>) in
             guard let `self` = self else { return }
             switch state {
             case .success(let albums):
