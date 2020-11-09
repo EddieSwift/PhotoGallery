@@ -15,6 +15,8 @@ class AlbumsTableViewController: UITableViewController {
     private let albumsURL = "/albums"
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -17,6 +17,8 @@ class PhotosCollectionViewController: UICollectionViewController {
     private var photoUrl = ""
     var page = 0
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -98,7 +100,7 @@ extension PhotosCollectionViewController {
     // MARK: - Navigation
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = PhotoViewController(nibName: "PhotoViewController", bundle: nil)
+        let vc = PhotoViewController()
         vc.photo = photos[indexPath.row]
         present(vc, animated: true, completion: nil)
     }

@@ -26,7 +26,6 @@
 		B092212625570DC200A21645 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092212425570DC200A21645 /* PhotoCollectionViewCell.swift */; };
 		B092212B25570E3D00A21645 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B092212A25570E3C00A21645 /* PhotoCollectionViewCell.xib */; };
 		B09221312557259F00A21645 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B092212F2557259F00A21645 /* PhotoViewController.swift */; };
-		B09221322557259F00A21645 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B09221302557259F00A21645 /* PhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,7 +51,6 @@
 		B092212425570DC200A21645 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		B092212A25570E3C00A21645 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		B092212F2557259F00A21645 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		B09221302557259F00A21645 /* PhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		C08E52E9551C57283977241F /* Pods-PhotoGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGallery.release.xcconfig"; path = "Target Support Files/Pods-PhotoGallery/Pods-PhotoGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +113,6 @@
 				B09221032556FAE800A21645 /* AlbumsTableViewController.swift */,
 				B092211F25570CDD00A21645 /* PhotosCollectionViewController.swift */,
 				B092212F2557259F00A21645 /* PhotoViewController.swift */,
-				B09221302557259F00A21645 /* PhotoViewController.xib */,
 				B09220C12556E64A00A21645 /* Main.storyboard */,
 			);
 			path = ViewControllers;
@@ -264,7 +261,6 @@
 				B09220F52556F74200A21645 /* LaunchScreen.storyboard in Resources */,
 				B09220C52556E64C00A21645 /* Assets.xcassets in Resources */,
 				B09220C32556E64A00A21645 /* Main.storyboard in Resources */,
-				B09221322557259F00A21645 /* PhotoViewController.xib in Resources */,
 				B092212B25570E3D00A21645 /* PhotoCollectionViewCell.xib in Resources */,
 				B09221162556FD5F00A21645 /* AlbumTableViewCell.xib in Resources */,
 			);
