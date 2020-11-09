@@ -114,7 +114,7 @@ extension PhotosCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow: CGFloat = 3
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
-        let paddingWidth = layout.minimumInteritemSpacing * (itemsPerRow - 1) + CGFloat(16*2)
+        let paddingWidth = layout.minimumInteritemSpacing * itemsPerRow + CGFloat(16*2)
         let availableWidth = collectionView.frame.width - paddingWidth
         let widthPerItem = availableWidth / itemsPerRow
         

@@ -36,6 +36,7 @@ class PhotoViewController: UIViewController, UINavigationBarDelegate {
         super.viewDidLoad()
         
         setupUI()
+        setupGestures()
         perform(#selector(flipImage), with: nil, afterDelay: 0.3)
     }
     
@@ -43,6 +44,19 @@ class PhotoViewController: UIViewController, UINavigationBarDelegate {
     
     private func setupUI() {
         view.backgroundColor = .white
+        
+        let navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 75))
+        navigationBar.backgroundColor = UIColor.white
+        navigationBar.delegate = self
+        
+        let navItem = UINavigationItem()
+        navItem.title = "Photo"
+        navItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action,
+                                                     target: self,
+                                                     action: #selector(sharePhoto)) 
+        navigationBar.items = [navItem]
+        
+        view.addSubview(navigationBar)
         
         titleLabel.text = photo.title.capitalizingFirstLetter()
         imageView.loadImageInCache(with: photo.url)
@@ -67,11 +81,33 @@ class PhotoViewController: UIViewController, UINavigationBarDelegate {
         ])
     }
     
+    private func setupGestures() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    // MARK: - Bar Button Action Methods
+    
+    @objc private func sharePhoto() {
+        let text = photo.title.capitalizingFirstLetter()
+        let image = imageView.image
+        let myWebsite = NSURL(string: photo.url)
+        let shareAll = [text, image as Any, myWebsite ?? ""] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     // MARK: - Animation
     
     @objc private func flipImage() {
         let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews]
         UIView.transition(with: imageView, duration: 1.0, options: transitionOptions, animations: nil)
+    }
+    
+    @objc private func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        perform(#selector(flipImage), with: nil, afterDelay: 0.3)
     }
     
 }
